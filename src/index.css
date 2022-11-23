@@ -4,3 +4,37 @@ img{
   width: 48px;
   height: 48px;
 }
+
+html{
+  margin: 0;
+  padding: 0;
+
+}
+
+.App{
+  background-color: #75c7ff;
+margin: 4rem;
+padding: 2rem 4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+h1{
+  font-size: 2.5rem;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+img{
+  width:50%;
+  height:50%;
+}
+
+p{
+  align-items: center;
+}
+

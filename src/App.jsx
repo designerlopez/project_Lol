@@ -5,44 +5,39 @@ import Card from './components/Card'
 
 function App() {
 
-  const [champion,setChampion] = useState({})
+  const [champions,setChampion] = useState([])
 
   useEffect(()=>{
-    const url='http://ddragon.leagueoflegends.com/cdn/12.22.1/data/en_US/champion.json'
+    const url="http://ddragon.leagueoflegends.com/cdn/12.22.1/data/es_ES/champion.json"
     axios.get(url)
-      .then(({data})=>{
-     setChampion(data.data)
-      
-      
+      .then(res=>{
+        const {data}=res.data
+        const keysChampions=Object.keys(data)
+        const championsFormat=keysChampions.map(champion=>({
+          name:champion,
+          img: `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion}_0.jpg`,
+          stats:data[champion].stats,
+          
+        }))
+        
+        
+      setChampion(championsFormat)   
       })
-      .catch(err=>console.log(err))
+      
 
-  }, [])
-  
-  
+  }, []) 
 
   return (
     <div className="App">
 
       <h1>League of legends Database</h1>
 
-     {/*   <h2>{champion.id}</h2> */}
-     {/*  <img src={`http://ddragon.leagueoflegends.com/cdn/12.22.1/img/champion/${champion?.id}.png`} alt="champion" /> */}
+      <h2>{champions[3]?.name}</h2> 
+      <img src={champions[3]?.img} alt="champion" />
+      <button>clic aca para cambiar</button>
+      
 
-      {/* {champion.map((card, id)=>{
-        return <Card key ={id} 
-        title={card.id} 
-        item1={card.id}
-        tem2={card.id} 
-        item3={card.id}
-        
-              /> ;
-      })} */}
-
-
-
-
-
+      
       
     </div>
   )
