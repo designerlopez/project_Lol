@@ -1,17 +1,30 @@
 
 
-img{
-  display: flex;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-}
-
 html{
   margin: 0;
   padding: 0;
 
 }
+
+h1{
+  font-size: 2.5rem;
+  align-items: center;
+}
+
+h2{
+  font-size: 2rem;
+}
+
+img{
+  width:40%;
+  height:40%;
+}
+
+p{
+  align-items: center;
+}
+
+
 
 .App{
   background-color: #75c7ff;
@@ -22,21 +35,3 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 }
-
-h1{
-  font-size: 2.5rem;
-}
-
-h2{
-  font-size: 2rem;
-}
-
-img{
-  width:50%;
-  height:50%;
-}
-
-p{
-  align-items: center;
-}
-

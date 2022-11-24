@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Card from './components/Card'
 
+import Navbar from './components/Navbar'
+
 function App() {
 
   const [champions,setChampion] = useState([])
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-
+      <Navbar/>
       <h1>League of legends Database</h1>
 
       <h2>{champions[3]?.name}</h2> 
