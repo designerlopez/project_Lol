@@ -1,38 +1,35 @@
-
-
 html{
   margin: 0;
   padding: 0;
-
 }
 
 body{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-
 }
+
 h1{
   font-size: 2.5rem;
   align-items: center;
+  margin-bottom: 1.2rem;
 }
 
 h2{
   font-size: 2rem;
 }
 
-
-
 p{
   align-items:flex-start;
 }
 
+button{
+border-radius: 1rem;
+gap: 1rem;
+margin:0.2rem
 
-
-
-
+}
 .App{
-
 
 padding: 2rem 4rem;
 display: flex;
@@ -41,56 +38,30 @@ align-items: center;
 flex-direction: column;
 }
 
-
-.card_img{
-  display: flex;
-  
-  justify-content: center;
-  align-items: center;
-  padding: 0rem 1rem;
-
-}
-
-.card_img img{
-  width: 90%;
-
-}
-
-.card_stats{
-  background-color: white;
-  gap: 1rem;
-  padding: .2rem;
-  
-  align-items: center;
-}
-
-
 .card{
-  
   background-color: #75c7ff;
   justify-content: center;
   align-items: center;
   padding: 0rem 0rem;
-  width: 350px;
-  height: 800px;  
-  margin: 1rem;
+  width: 25rem;
+  height: 45rem;  
+  margin: 0rem;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .animate-bg:before, .animate-bg:after{
   content: '';
   position:absolute;
-  left: -20px;
-  top: -20px;
+  left: -2rem;
+  top: -1.5rem;
   background:linear-gradient(120deg, #79fb00, #8d01a0,
   #031ba5,#ff004c);
   background-size: 300%;
-  width: 390px;
-  height: 850px;
+  width: calc(100% + 4rem);
+  height: calc(100% + 5rem);
   z-index: -1;
   animation: BGgradient 15s ease infinite;
-
 }
 
 @keyframes BGgradient {
@@ -113,4 +84,41 @@ flex-direction: column;
   filter: brightness(1.4);
   filter: drop-shadow(16px 16px 20px rgb(248, 220, 97));
   filter: blur(15px);
+}
+
+.card_img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.card_img img{
+  width: 80%;
+}
+
+
+
+.card_stats{
+  background-color: white;
+  gap: 1rem;
+  padding: .2rem;
+  align-items: center;
+  width: 15.5rem;
+}
+
+.btn_Next-Champ{
+  position: absolute;
+  top:22rem;
+  left: 34rem;
+  width: 3rem;
+}
+
+
+.btn_Back-Champ{
+  position: absolute;
+  top:22rem;
+  left: 14rem;
+  width: 3rem;
 }

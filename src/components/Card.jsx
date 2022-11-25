@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-export const Card = ({name, img, attack, hp, damage, movespeed}) => {
+export const Card = ({name, img, attack, hp, damage, movespeed, changeSkin, counterSkin}) => {
 
     return (
       
@@ -11,7 +11,8 @@ export const Card = ({name, img, attack, hp, damage, movespeed}) => {
         {/* <h4>Title</h4>*/}
 
         <div className='card_img'>
-        <img src={img} alt="" />
+        <img src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${name}_${counterSkin}.jpg`} alt="" />
+        <button onClick={changeSkin}>Next Skin</button>
         </div>
         <div className='card_stats'>
         
